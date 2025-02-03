@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+  <div id="div1" > 
+    <div id="registrationDiv">
+
+  
+    <h1 id="headLabel">Course Registration</h1>
+    <label for="fullname">Student name:</label><br>
+    <input  class="normalLabel" type="text" id="fullname" name="fullname"><br><br>
+    <label for="gender">Gender</label><br>
+    <input type="radio" id="gender" name="gender" value="Male">
+    <label for="gender">Male</label>
+    <input type="radio" id="gender" name="gender" value="Female">
+    <label for="gender">Female</label>
+    <input type="radio" id="gender" name="gender" value="OTHER">
+    <label for="gender">No Other Gender</label><br><br>
+    <label for="gender">Courses</label><br>
+    <input type="checkbox" id="choice1" name="choice1" value="C1">
+    <label for="choice1"> AI</label>
+    <input type="checkbox" id="choice2" name="choice2" value="C2">
+    <label for="choice2"> DS</label>
+    <input type="checkbox" id="choice4" name="choice3" value="C3">
+    <label for="choice3"> OOP</label>
+    <input type="checkbox" id="choice4" name="choice4" value="C4">
+    
+    <label for="choice4"> PF</label><br><br>
+  </div>
+    <input type="submit" id="submit" value="Submit"><br>
+   
+    <label id="availbleCourses" for="TableName"> Available Courses</label><br><br>
+ 
+    <table >
+        <tr>
+          <th class="headRow">Course Code</th>
+          <th class="headRow">Course Name</th>
+          <th class="headRow">Credits</th>
+        </tr>
+        <tr>
+          <td>CS101</td>
+          <td>AI</td>
+          <td>3</td>
+        </tr>
+        <tr>
+            <td>CS102</td>
+            <td>DS</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>CS103</td>
+            <td>OOP</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>CS104</td>
+            <td>PF</td>
+            <td>3</td>
+          </tr>
+      </table>
+    </div>
+  
+</body>
+</html>
