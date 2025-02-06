@@ -1,0 +1,67 @@
+#div{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border-width: 2px;
+  background-color: rgb(207, 204, 204);
+    font-style: italic;
+    color: azure;
+    /* animation: spin 4s ease-out 5; */
+    position: fixed;
+    /* display: flex; */
+    display: block;
+    /* flex-wrap: wrap; */
+    flex-direction:row;
+    justify-content: center;
+
+}
+#div1{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    flex-grow: 3;
+    
+}
+#div2{
+   
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+}
+#div3{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    
+}
+#div4{
+   
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+}
+body
+{
+    background-color: aliceblue;
+}
+p{
+    font-size: 2em;
+}
+
+@keyframes spin {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+    
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: rgb(15, 7, 8);
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        background-color: pink;
+    }
+}
