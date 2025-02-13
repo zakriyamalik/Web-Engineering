@@ -177,8 +177,23 @@ span{
 }
 
 
-
-
+#theme-toggle {
+    background: none;  /* Removes background */
+    border: none;      /* Removes border */
+    cursor: pointer;   /* Makes it clickable */
+    font-size: 24px;   /* Adjust icon size */
+    color: inherit;    /* Uses text color from the theme */
+    outline: none;     /* Removes focus outline */
+}
+#theme-toggle:hover {
+    color: #b2b3a9;    /* Changes color on hover */
+}
+#theme-toggle:active {
+    transform: scale(1.1);  /* Scales down on click */
+}
+#theme-toggle  p{
+    font-size: 12px;
+}
 /* Panel */
 
 .panel
