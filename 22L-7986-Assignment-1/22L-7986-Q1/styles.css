@@ -528,3 +528,79 @@ ul a{
         justify-content: space-evenly;
     }
 }
+
+
+/* Dark Mode */
+/* Dark Mode Overrides */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #131921; /* Darker navbar */
+  }
+  
+  .dark-mode .nav-search {
+    background-color: #37475a !important; /* Dark search bar */
+  }
+  
+  .dark-mode .search-select {
+    background-color: #485769; /* Dark dropdown */
+    color: #ffffff;
+  }
+  
+  .dark-mode .search-input {
+    background-color: #37475a; /* Dark input field */
+    color: #ffffff;
+  }
+  
+  .dark-mode .lang-select {
+    background-color: #131921; /* Match navbar */
+  }
+  
+  .dark-mode .panel {
+    background-color: #232f3e; /* Dark panel */
+  }
+  
+  .dark-mode .hero-msg {
+    background-color: #37475a; /* Dark hero message */
+    color: #ffffff;
+  }
+  
+  .dark-mode .hero-msg a {
+    color: #00a8e8; /* Brighter link color */
+  }
+  
+  .dark-mode .shop-section {
+    background-color: #131921; /* Dark background for product grid */
+  }
+  
+  .dark-mode .box {
+    background-color: #232f3e; /* Dark product cards */
+    color: #ffffff;
+  }
+  
+  .dark-mode .box-content p {
+    color: #00a8e8; /* Brighter product links */
+  }
+  
+  .dark-mode .foot-panel1 {
+    background-color: #0b222d; /* Darker footer panel */
+  }
+  
+  .dark-mode .footpanel2,
+  .dark-mode .foot-panel3,
+  .dark-mode .pages,
+  .dark-mode .copyright {
+    background-color: #131921; /* Consistent dark footer */
+  }
+  
+  .dark-mode ul a {
+    color: #cccccc !important; /* Footer links */
+  }
+  
+  /* Maintain contrast for borders */
+  .dark-mode .border:hover {
+    border-color: #cccccc;
+  }

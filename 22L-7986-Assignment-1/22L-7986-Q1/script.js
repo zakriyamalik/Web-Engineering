@@ -32,10 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("theme", "light");
       }
     });
-  
+  console.log("Initial theme:", localStorage.getItem("theme"));
+  console.log("Before if statement:", document.body.classList.contains("dark-mode"));
     if (localStorage.getItem("theme") === "dark") {
       console.log("Applying saved dark mode.");
       document.body.classList.add("dark-mode");
+      console.log("dark-mode active:", document.body.classList.contains("dark-mode"));
       toggleIcon.classList.replace("fa-toggle-off", "fa-toggle-on");
     }
   });
