@@ -1,0 +1,125 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Delegation Example</title>
+  <style>
+    /* Basic styling for list items */
+    #myList li {
+      cursor: pointer;
+      padding: 8px;
+      border: 1px solid #ccc;
+      margin: 4px;
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Event Delegation Example</h1>
+  <ul id="myList">
+    <li id="f">Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+
+ 
+  <script src="localStorage.js" ></script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>stopPropagation Example</title>
+  <style>
+    .outer { padding: 20px; border: 1px solid blue; }
+    .inner { padding: 20px; border: 1px solid green; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    Outer Div
+    <div class="inner">
+      Inner Div
+      <button id="myButton">Click Me</button>
+    </div>
+  </div>
+
+  <script>
+    const outerDiv = document.querySelector('.outer');
+    const innerDiv = document.querySelector('.inner');
+    const myButton = document.getElementById('myButton');
+
+    outerDiv.addEventListener('click', function() {
+      console.log('Outer Div clicked');
+    });
+
+    innerDiv.addEventListener('click', function() {
+      console.log('Inner Div clicked');
+    });
+
+    myButton.addEventListener('click', function(event) {
+      console.log('Button clicked');
+      // Prevent the event from bubbling up to innerDiv and outerDiv
+    //  event.stopPropagation();
+    });
+  </script>
+</body>
+</html> -->
+
+
+<!-- Prevent Default Example  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>preventDefault() Example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    a, button {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>preventDefault() Example</h1>
+  
+  <!-- Example 1: Link -->
+  <a href="https://www.example.com" id="myLink">Go to Example.com</a>
+  
+  <!-- Example 2: Form -->
+  <form id="myForm">
+    <input type="text" name="username" placeholder="Enter username" required>
+    <button type="submit">Submit Form</button>
+  </form>
+
+  <script>
+    // Example 1: Prevent link navigation
+    const myLink = document.getElementById('myLink');
+    myLink.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default navigation
+      console.log('Navigation prevented. You clicked the link, but it did not redirect!');
+    });
+
+    // Example 2: Prevent form submission
+    const myForm = document.getElementById('myForm');
+    myForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting and reloading the page
+      console.log('Form submission prevented. You can handle the data with JavaScript.');
+      // For example, you might process the form data here:
+      const username = myForm.elements.username.value;
+      console.log('Username:', username);
+    });
+  </script>
+</body>
+</html>
