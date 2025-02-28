@@ -1,39 +1,48 @@
+<!-- Animation Practice  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesPractice.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation Example</title>
+  <style>
+   
+   /* .box:hover{
+    width: 200px;
+    height: 200px;
+    
+   transition: width 2s ease-in 0ms,height 2s ease-in 0ms;
+    
+   } */
+   @keyframes example{
+    from{transform: (0deg);}
+    to{transform: (360deg);}
+   }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 0, 0);
+      /* animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+     */
+    }
+
+    .box:hover{
+        animation: example 4s ease-in 0s infinite;
+
+    }
+ 
+    
+  </style>
 </head>
 <body>
-    assalamu alaikum
-    <h1>My First Heading</h1>
-
-
-    <div class="container">
-        <div id="div1">
-            1
-        </div>
-        <div id="div2">
-2
-        </div>
-
-        <div id="div3">
-3
-        </div>
-
-        <div id="div4">
-4
-        </div>
-
-        <!-- <div id="div5">
-5
-        </div> -->
-    </div>
+  <div class="box"></div>
 </body>
 </html>
-
 
 
 
@@ -47,7 +56,7 @@
     <title>Html</title>
 </head>
 <body>
-    <!-- <span>NUCES</span>
+     <span>NUCES</span>
     <div>FAST</div>
     
    
@@ -132,4 +141,49 @@
 
     <input type="text" value="Sign up">
         
-    </form> -->
+    </form>
+</body>
+</html> 
+
+
+
+FlexBox Practice
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesPractice.css">
+    <title>Document</title>
+</head>
+<body>
+    assalamu alaikum
+    <h1>My First Heading</h1>
+
+
+    <div class="container">
+        <div id="div1">
+            1
+        </div>
+        <div id="div2">
+2
+        </div>
+
+        <div id="div3">
+3
+        </div>
+
+        <div id="div4">
+4
+        </div>
+
+        <div id="div5">
+5
+        </div>
+    </div>
+</body>
+</html> -->
