@@ -16,14 +16,20 @@
     
    } */
    @keyframes example{
-    from{transform: (0deg);}
-    to{transform: (360deg);}
+    from{
+        transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
    }
 
     .box {
-      width: 100px;
-      height: 100px;
-      background-color: rgb(255, 0, 0);
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      border: 16px solid transparent;;
+      border-top: 16px solid transparent;
+      border-top-color:black ;
+
+      border-radius: 50%;
       /* animation-name: example;
       animation-duration: 4s;
       animation-iteration-count: infinite;
@@ -32,7 +38,7 @@
     }
 
     .box:hover{
-        animation: example 4s ease-in 0s infinite;
+        animation: example 4s ease-in-out 0s infinite;
 
     }
  
