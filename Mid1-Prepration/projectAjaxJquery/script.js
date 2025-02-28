@@ -34,3 +34,9 @@ $(document).ready(function(){
     })
     
 })
+
+
+
+
+const body=document.querySelector("body");
+console.log(body.classList.add("bg-dark"));
