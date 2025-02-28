@@ -39,4 +39,6 @@ $(document).ready(function(){
 
 
 const body=document.querySelector("body");
+const child=body.childNodes;
+console.log(child);
 console.log(body.classList.add("bg-dark"));
