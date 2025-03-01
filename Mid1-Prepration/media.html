@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="media.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myFunction()
+        {
+
+            const after=document.getElementById("after");
+            // const children=div.children;
+
+            // const ul=document.createElement("ul");
+            // for (let i = 0; i < children.length; i++) {
+            // const child = children[i];
+            // const li=document.createElement("li");
+            // li.innerHTML=child.innerHTML;
+            // ul.append(li);
+            // console.log(li);
+            // }
+            console.log("in function");
+            if(after.style.display=="none")
+            {
+                console.log("In if")
+                console.log(after.style.display)
+                after.style.display="flex"
+                console.log(after.style.display)
+            }
+            else
+            {
+                console.log("In else")
+                console.log(after.style.display)
+                after.style.display="none"
+                console.log(after.style.display)
+            }
+
+
+
+        }
+    </script>
+    <div id="navBar" >
+        <div id="one" class="navChild">
+            One
+        </div>
+
+        <div id="two" class="navChild">
+            two
+        </div>
+
+        <div id="three" class="navChild">
+            three
+        </div>
+
+        <div id="four" class="navChild">
+            four
+        </div>
+
+        <div id="five" class="navChild">
+            five
+        </div>
+        <div id="six" style="display: none;">
+            <i class="fa fa-bars" onclick="myFunction()" ></i>
+        </div>
+    </div>
+    <div id="after" style="display: none;">
+        <div id="one" class="navChild1">
+            One
+        </div>
+
+        <div id="two" class="navChild1">
+            two
+        </div>
+
+        <div id="three" class="navChild1">
+            three
+        </div>
+
+        <div id="four" class="navChild1">
+            four
+        </div>
+
+        <div id="five" class="navChild1">
+            five
+        </div>
+    </div>
+   
+</body>
+</html>

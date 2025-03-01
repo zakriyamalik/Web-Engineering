@@ -465,7 +465,7 @@ ul a{
 @media (min-width: 601px) and (max-width: 1024px) {
     .navbar {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .navlogo, .nav-search, .select-lang, .nav-signin, .nav-return, .nav-cart {

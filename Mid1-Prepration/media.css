@@ -1,0 +1,49 @@
+#navBar{
+    height: 30px;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: start;
+    justify-content: space-evenly;
+}
+#after{
+    height: 100px;
+    width: 200px;
+    margin-left: 27%;
+    background-color: rgb(251, 252, 253);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#six {
+    display: none;
+  }
+
+@media screen and (min-width:400px ) and ( max-width:600px)
+{
+  
+    .navChild
+    {
+        background-color: black;
+        color: blue;
+        display: none;
+        
+        
+    }
+    .navChild1
+    {
+        text-align: center;
+
+
+        border: 1px;
+        
+    }
+    #six{
+        display: block !important;
+        align-items: flex-end;
+     }
+   
+}
+
+
