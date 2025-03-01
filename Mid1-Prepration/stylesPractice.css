@@ -1,6 +1,5 @@
 .container{
     display: flex;
-    align-self: center;
     column-gap: 10px;
     row-gap: 10px;
     /* flex-direction: space-evenly; */
@@ -12,50 +11,52 @@
     text-align: center;
     flex-wrap: wrap;
     margin-left: 20%;
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 1000px;
     background-color: #e0c0c0;
     box-shadow: #e0c0c0 10px 10px 10px;
     border-radius: 10px;
 }
 
 #div1{
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 200px;
     color: azure;
     text-shadow: #eef6f7 2px 2px 2px;
     box-shadow: #0e0a0a 10px 10px 10px;
     background-color: #0e0a0a;
     justify-content: center;
     align-items: center;
-  
-    display: flex;
+    overflow: hidden;
+    display: flex;min-width: 0;
 }
 
 #div2{
-    width: 300px;
-    height: 300px; color: azure;
+    width: 150px;
+    height: 200px; color: azure;
     background-color: #5a2020;
     box-shadow: #5a2020 10px 10px 10px;
     align-items: center;
     justify-content: center;
     display: flex;
+    overflow: hidden;min-width: 0;
 }
 
 #div3{
-    width: 300px;
-    height: 300px; color: azure;
+    width: 150px;
+    height: 200px; color: azure;
     background-color: #7aac1d;
     box-shadow: #7aac1d 10px 10px 10px;
     align-items: center;
     justify-content: center;
     display: flex;
+    overflow: hidden;min-width: 0;
 }
 
 
 #div4{
-    width: 300px;
-    height: 300px; color: azure;
+    width: 150px;
+    height: 200px; color: azure;
     background-color: #3b919c;
     box-shadow: #3b919c 10px 10px 10px;
    
@@ -63,8 +64,111 @@
     justify-content: center;
     display: flex;
     text-shadow: #eef6f7;
+    display: flex;
+    overflow: hidden;
+    min-width: 0;
+}
+
+#div5{
+    width: 150px;
+    height: 200px; color: azure;
+    background-color: #9c3b87;
+    box-shadow: #9c3b87 10px 10px 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-shadow: #eef6f7;
+    display: flex;
+    overflow: hidden;
+    min-width: 0;
 
 }
 
 
+#div6{
+    width: 150px;
+    height: 200px; color: azure;
+    background-color: #9c3b87;
+    box-shadow: #9c3b87 10px 10px 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-shadow: #eef6f7;
+    display: flex;
+    overflow: hidden;
+    min-width: 0;
 
+}
+
+#div7{
+    width: 150px;
+    height: 200px; color: azure;
+    background-color: #9c3b87;
+    box-shadow: #9c3b87 10px 10px 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-shadow: #eef6f7;
+    display: flex;
+    overflow: hidden;
+    min-width: 0;
+
+}
+
+#div8{
+    width: 150px;
+    height: 200px; color: azure;
+    background-color: #9c3b87;
+    box-shadow: #9c3b87 10px 10px 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-shadow: #eef6f7;
+    display: flex;
+    overflow: hidden;
+    min-width: 0;
+
+}
+
+/* Media Queries in CSS */
+
+@media screen and (min-width:800px) and (max-width:1000px){
+   body{
+         background-color: #25db0d;
+         
+   }
+   .container{
+    width: 600px;
+    height: 800px;
+}
+/* .container #div1, #div2, #div3, #div4, #div5{
+    width: 50%;
+    height: 20%;
+    background-color: #b0e2e0;
+} */
+
+}
+
+@media screen and (min-width:400px) and (max-width:800px){
+    body{
+          background-color: #d8db0d;
+        
+    }
+    .container{
+        width: 600px;
+        height: 800px;
+    }
+ }
+ 
+
+
+@media screen and (max-width:400px){
+    body{
+          background-color: #db0d0d;
+         
+    } .container{
+        width: 400px;
+        height: 800px;
+    }
+ }
+ 
