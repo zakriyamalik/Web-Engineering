@@ -1,0 +1,34 @@
+#main{
+    height: 500px;
+    width: 600px;
+    background-color: rgb(187, 180, 180);
+    display: flex;
+    margin-left: 30%;
+    flex-direction: start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    padding-top: 5%;
+    border-radius: 6%;
+    box-shadow: 10px 15px 5px rgb(187, 180, 180)  ;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#submitbtn{
+    color: #000;
+    background-color: aliceblue;
+    transition: color 1s linear 1ms, background-color 1s linear 1ms;
+}
+#submitbtn:hover{
+    color: aliceblue;
+    background-color: #000;
+   
+}
+@media screen and (max-width:400px) {
+   #main{
+    width: 300px;
+    
+   } 
+    
+}
