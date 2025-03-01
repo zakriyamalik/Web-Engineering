@@ -1,38 +1,38 @@
   
 // AJAX
 
-// function loadData(){
-//     const xhr=new XMLHttpRequest();
+function loadData(){
+    const xhr=new XMLHttpRequest();
     
    
-//     xhr.open('GET','https://jsonplaceholder.typicode.com/posts/1', true);
-//     xhr.setRequestHeader('X-Custom-Header', 'AJAXDemo');
-//     xhr.onreadystatechange=function(){
-//         if(xhr.readyState==4 && xhr.status==200){
-//             var data=JSON.parse(xhr.responseText);
-//             document.getElementById('result').innerHTML=data.title+"<br>"+data.body;
-//         }
-//         else if(xhr.readyState==4 && xhr.status!=200)
-//         {
-//             document.getElementById('result').innerHTML="Error";
-//         }
-//         else
-//         {
-//             document.getElementById('result').innerHTML="Loading";
-//         }
-//     }
-//     xhr.send();
-// }
+    xhr.open('GET','https://jsonplaceholder.typicode.com/posts/1', true);
+    xhr.setRequestHeader('X-Custom-Header', 'AJAXDemo');
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState==4 && xhr.status==200){
+            var data=JSON.parse(xhr.responseText);
+            document.getElementById('result').innerHTML=data.title+"<br>"+data.body;
+        }
+        else if(xhr.readyState==4 && xhr.status!=200)
+        {
+            document.getElementById('result').innerHTML="Error";
+        }
+        else
+        {
+            document.getElementById('result').innerHTML="Loading";
+        }
+    }
+    xhr.send();
+}
 
-// function abortRequest() {
-//     const xhr=new XMLHttpRequest();
+function abortRequest() {
+    const xhr=new XMLHttpRequest();
     
    
-//     if (xhr && xhr.readyState !== XMLHttpRequest.DONE) {
-//       xhr.abort(); // Aborts the current request
-//       document.getElementById('result').innerHTML = 'Request aborted.';
-//     }
-//   }
+    if (xhr && xhr.readyState !== XMLHttpRequest.DONE) {
+      xhr.abort(); // Aborts the current request
+      document.getElementById('result').innerHTML = 'Request aborted.';
+    }
+  }
 
 
 // JQUERY
