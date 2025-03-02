@@ -41,4 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleIcon.classList.replace("fa-toggle-off", "fa-toggle-on");
     }
   });
-  
+  function myFunction()
+  {
+    console.log("In my function\n");
+      const after=document.getElementById("afterNav");
+      console.log("in function");
+      if(after.style.display=="none")
+      {
+          console.log("In if")
+          console.log(after.style.display)
+          after.style.display="flex"
+          console.log(after.style.display)
+      }
+      else
+      {
+          console.log("In else")
+          console.log(after.style.display)
+          after.style.display="none"
+          console.log(after.style.display)
+      }
+
+
+
+  }
