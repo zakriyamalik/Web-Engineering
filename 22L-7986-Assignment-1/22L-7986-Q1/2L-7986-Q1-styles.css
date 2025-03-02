@@ -517,7 +517,7 @@ ul a{
         flex-direction: row;
         justify-content: space-around;
     }
-}/* Desktops */
+}
 
 @media (min-width: 1025px) {
     .navbar {
@@ -527,17 +527,7 @@ ul a{
         justify-content: space-between;
         padding: 10px;
        
-    }
-
-    .navaddress , .nav-search, .select-lang,.lang-select1, .nav-signin, .nav-return, .nav-cart {
-        width: 100%;
-        margin-bottom: 10px;
-        display: none;
-    }
-    .hamburger{
-        display: inline-flex !important;
-     }
-    
+    }   
 
     .hero-section {
         height: 380px;
@@ -562,69 +552,68 @@ ul a{
   }
   
   .dark-mode .navbar {
-    background-color: #131921; /* Darker navbar */
+    background-color: #131921;
   }
   
   .dark-mode .nav-search {
-    background-color: #37475a !important; /* Dark search bar */
+    background-color: #37475a !important; 
   }
   
   .dark-mode .search-select {
-    background-color: #485769; /* Dark dropdown */
+    background-color: #485769; 
     color: #ffffff;
   }
   
   .dark-mode .search-input {
-    background-color: #37475a; /* Dark input field */
+    background-color: #37475a; 
     color: #ffffff;
   }
   
   .dark-mode .lang-select {
-    background-color: #131921; /* Match navbar */
+    background-color: #131921; 
   }
   
   .dark-mode .panel {
-    background-color: #232f3e; /* Dark panel */
+    background-color: #232f3e; 
   }
   
   .dark-mode .hero-msg {
-    background-color: #37475a; /* Dark hero message */
+    background-color: #37475a; 
     color: #ffffff;
   }
   
   .dark-mode .hero-msg a {
-    color: #00a8e8; /* Brighter link color */
+    color: #00a8e8;
   }
   
   .dark-mode .shop-section {
-    background-color: #131921; /* Dark background for product grid */
+    background-color: #131921; 
   }
   
   .dark-mode .box {
-    background-color: #232f3e; /* Dark product cards */
+    background-color: #232f3e; 
     color: #ffffff;
   }
   
   .dark-mode .box-content p {
-    color: #00a8e8; /* Brighter product links */
+    color: #00a8e8; 
   }
   
   .dark-mode .foot-panel1 {
-    background-color: #0b222d; /* Darker footer panel */
+    background-color: #0b222d;
   }
   
   .dark-mode .footpanel2,
   .dark-mode .foot-panel3,
   .dark-mode .pages,
   .dark-mode .copyright {
-    background-color: #131921; /* Consistent dark footer */
+    background-color: #131921; 
   }
   
   .dark-mode ul a {
-    color: #cccccc !important; /* Footer links */
+    color: #cccccc !important; 
   }
   
-  /* Maintain contrast for borders */
   .dark-mode .border:hover {
     border-color: #cccccc;
   }
