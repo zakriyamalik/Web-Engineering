@@ -99,10 +99,10 @@ $("#secondEle").click(function(){
     
   });
 
-  $("#sixthEle").click(function(){
+  $("#sixthEle").hover(function(){
     if(this.style.color == "yellow")
     {
-        $(".intro6").css("display","none");
+        // $(".intro6").css("display","none");
         $(this).css("color", "white");
     }
     else
@@ -111,12 +111,58 @@ $("#secondEle").click(function(){
         $(".intro6").css("display","block");
         $("#bodydiv").addclass("intro6");
        
-    }
-
-    
+    } 
     
   });
 
+  $("#intro6").hover(function(){
+    if(this.style.color == "yellow")
+    {
+          $(".intro6").css("display","none");
+        $(this).css("color", "white");
+    }
+    else
+    {
+        $(this).css("color", "yellow");
+        $(".intro6").css("display","block");
+        $("#bodydiv").addclass("intro6");
+       
+    } 
+    
+  });
+
+
+
+  $("#intro6ab").hover(function(){
+    if(this.style.color == "yellow")
+    {
+       $(this).css("color", "white");
+    }
+    else
+    {
+        $(this).css("color", "yellow");
+        $(".intro6").css("display","block");
+        $("#bodydiv").addclass("intro6");
+       
+    } 
+    
+  });
+
+
+  $("#intro6bb").hover(function(){
+    if(this.style.color == "yellow")
+    {
+        $(this).css("color", "white");
+    }
+    else
+    {
+        $(this).css("color", "yellow");
+        $(".intro6").css("display","block");
+        $("#bodydiv").addclass("intro6");
+       
+    } 
+    
+  });
   $("#sevenEle").click(function(){
     if(this.style.color == "yellow")
     {
@@ -130,26 +176,46 @@ $("#secondEle").click(function(){
         $("#bodydiv").addclass("intro7");
        
     }
-
+    $("#contactBody").hover(function(){
+        if(this.style.color == "yellow")
+            {
+                $(this).css("color", "black");
+               
+            }
+            else
+            {
+               
+                $.widget.bridge('uitooltip', $.ui.tooltip);
+    
+                $("#contactBody").uitooltip({ 
+                    content: "<strong>Hidfdfd!</strong>", 
+                    track: true,
+                    tooltipClass: "custom-tooltip"
+                });
+            }
+    
+        
+        
+      });
     
     
   });
-
-  $("#eightEle").click(function(){
-    if(this.style.color == "yellow")
-    {
-        $(".intro8").css("display","none");
+  $("#contactBody").click(function() {
+    if ($("#modelview").css("display") === "none") {
+        $("#modelview").css("display", "inline");
+        $(this).css("color", "blue");
+    } else {
+        $("#modelview").css("display", "none");
         $(this).css("color", "white");
     }
-    else
-    {
-        $(this).css("color", "yellow");
-        $(".intro8").css("display","block");
-        $("#bodydiv").addclass("intro8");
+});
+
+
+$(".intro4").click(function(){
+    $("#submitbtnid").click(function(){
+      let name=  $("nameinputid").text();
+       let remarks= $("remarksinputid").text();
        
-    }
-
-    
-    
-  });
-
+        
+    })
+})

@@ -10,3 +10,30 @@
     cursor: pointer;
 }
 
+#intro6{
+    margin-left: 70%;
+    background-color: black;
+    color: aliceblue;
+    display: inline;
+    width: 150px;
+    cursor: pointer;
+}
+.custom-tooltip {
+    color: blue; /* Set your desired text color */
+    /* Additional styling (optional) */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#modelview
+{
+    width: 40px;
+    height: 100px;
+    color: rgb(253, 253, 253);
+    background-color: rgb(104, 104, 104);
+    padding-left: 70%;
+
+}
