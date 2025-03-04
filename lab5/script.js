@@ -19,7 +19,7 @@
     {
         $(this).css("color", "yellow");
         $(".intro1").css("display","block");
-        $("#bodydiv").addclass("intro1");
+        $("#bodydiv").addClass("intro1");
        
     }
 
@@ -38,6 +38,15 @@ $("#secondEle").click(function(){
         $(this).css("color", "yellow");
         $(".intro2").css("display","block");
         $("#bodydiv").addclass("intro2");
+        $("#getValueButton").click(function() {
+            var selectedValue = $("input[name='gender']:checked").val();
+            console.log(selectedValue);
+            if (selectedValue) {
+                $("#result").text("Selected value: " + selectedValue);
+            } else {
+                $("#result").text("No option selected.");
+            }
+        });
        
     }
 
@@ -55,7 +64,7 @@ $("#secondEle").click(function(){
     {
         $(this).css("color", "yellow");
         $(".intro3").css("display","block");
-        $("#bodydiv").addclass("intro3");
+        $("#bodydiv").addClass("intro3");
        
     }
 
@@ -73,7 +82,7 @@ $("#secondEle").click(function(){
     {
         $(this).css("color", "yellow");
         $(".intro4").css("display","block");
-        $("#bodydiv").addclass("intro4");
+        $("#bodydiv").addClass("intro4");
        
     }
 
@@ -82,8 +91,10 @@ $("#secondEle").click(function(){
   });
 
   $("#fifthEle").click(function(){
+    console.log("Button Clicked!");
     if(this.style.color == "yellow")
     {
+        console.log("Change color Button Clicked!");
         $(".intro5").css("display","none");
         $(this).css("color", "white");
     }
@@ -91,8 +102,9 @@ $("#secondEle").click(function(){
     {
         $(this).css("color", "yellow");
         $(".intro5").css("display","block");
-        $("#bodydiv").addclass("intro5");
-       
+        $("#bodydiv").addClass("intro5");
+        console.log("Fifth")
+        // console.log("Cookie0  ",document.cookie);       
     }
 
     
@@ -109,7 +121,7 @@ $("#secondEle").click(function(){
     {
         $(this).css("color", "yellow");
         $(".intro6").css("display","block");
-        $("#bodydiv").addclass("intro6");
+        $("#bodydiv").addClass("intro6");
        
     } 
     
@@ -125,7 +137,7 @@ $("#secondEle").click(function(){
     {
         $(this).css("color", "yellow");
         $(".intro6").css("display","block");
-        $("#bodydiv").addclass("intro6");
+        $("#bodydiv").addClass("intro6");
        
     } 
     
@@ -142,7 +154,7 @@ $("#secondEle").click(function(){
     {
         $(this).css("color", "yellow");
         $(".intro6").css("display","block");
-        $("#bodydiv").addclass("intro6");
+        $("#bodydiv").addClass("intro6");
        
     } 
     
@@ -200,22 +212,19 @@ $("#secondEle").click(function(){
     
     
   });
-  $("#contactBody").click(function() {
-    if ($("#modelview").css("display") === "none") {
-        $("#modelview").css("display", "inline");
-        $(this).css("color", "blue");
-    } else {
-        $("#modelview").css("display", "none");
-        $(this).css("color", "white");
-    }
-});
-
 
 $(".intro4").click(function(){
     $("#submitbtnid").click(function(){
-      let name=  $("nameinputid").text();
+      let name1=  $("nameinputid").text();
        let remarks= $("remarksinputid").text();
-       
-        
+
+       var userData = {
+        username: name1,
+        Remark: remarks,
+    };
+    
+    document.cookie = `userData=${encodeURIComponent(JSON.stringify(userData))}; expires=Thu, 31 Dec 2025 12:00:00 UTC; path=/`;
+    
+
     })
 })
