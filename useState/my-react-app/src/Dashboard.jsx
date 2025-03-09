@@ -64,9 +64,13 @@ function Dashboard() {
   };
 
   // Filter products based on selected category
-  const filteredProducts = categoryFilter === 'All'
-    ? productsData
-    : productsData.filter(product => product.category === categoryFilter);
+  let filteredProducts;
+  if (categoryFilter === 'All') {
+    filteredProducts = productsData;
+  } else {
+    filteredProducts = productsData.filter(product => product.category === categoryFilter);
+  }
+  
 
   return (
     <div style={{ margin: '20px', fontFamily: 'Arial, sans-serif' }}>
