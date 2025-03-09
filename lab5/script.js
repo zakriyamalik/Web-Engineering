@@ -30,29 +30,39 @@
 $("#secondEle").click(function(){
     if(this.style.color == "yellow")
     {
-        $(".intro2").css("display","none");
+        $(".intro2").empty().css("display","none");
         $(this).css("color", "white");
+
     }
     else
     {
         $(this).css("color", "yellow");
         $(".intro2").css("display","block");
-        $("#bodydiv").addclass("intro2");
-        $("#getValueButton").click(function() {
-            var selectedValue = $("input[name='gender']:checked").val();
-            console.log(selectedValue);
-            if (selectedValue) {
-                $("#result").text("Selected value: " + selectedValue);
-            } else {
-                $("#result").text("No option selected.");
-            }
-        });
+        $("#bodydiv").addClass("intro2");
        
-    }
 
-    
-    
+       
+    }    
   });
+  $("#getValueButton").click(function() {
+    var selectedValue = $("input[name='coffee']:checked").val();
+    console.log(selectedValue);
+    if (selectedValue) {
+        var res=$(`<img src="coffee1.jpeg"></img>`).css({
+            width:"100px",
+            height:"100px"
+        })
+       
+        $(".intro2").append(res)
+    } else {
+        var res1=$(`<img src="coffee2.jpeg"></img>`).css({
+            width:"100px",
+            height:"100px"
+        })
+       
+        $(".intro2").empty().append(res1)
+    }
+});
 
   $("#thirdEle").click(function(){
     if(this.style.color == "yellow")
@@ -65,6 +75,20 @@ $("#secondEle").click(function(){
         $(this).css("color", "yellow");
         $(".intro3").css("display","block");
         $("#bodydiv").addClass("intro3");
+        $.ajax({
+            url:"http://universities.hipolabs.com/search?name=fast",
+            method: "GET",
+            success: function(response){
+                list="<ul>";
+                response.forEach(item => {
+                    list+=`<li>${item.name}<br>${item.domains}<br>${item.web_pages}<br>
+                    </li>`
+                });
+                list+="<ul>";
+                
+                $(".intro3").empty().append(list)
+            }
+        })
        
     }
 
@@ -84,31 +108,55 @@ $("#secondEle").click(function(){
         $(".intro4").css("display","block");
         $("#bodydiv").addClass("intro4");
        
-    }
-
-    
-    
+    }    
   });
+
+
+  $("#submitbtnidi4").click(function(){
+    let name1=  $("#nameinputid").val();
+     let remarks= $("#remarksinputid").val();
+
+     var userData = {
+      username: name1,
+      Remark: remarks,
+  };
+  console.log("User Name : "+name1+" Remarks : "+remarks) 
+//   $.cookie(name1.remarks)
+  document.cookie=name1+"="+remarks;
+  
+})
+
+
+
 
   $("#fifthEle").click(function(){
     console.log("Button Clicked!");
     if(this.style.color == "yellow")
     {
         console.log("Change color Button Clicked!");
-        $(".intro5").css("display","none");
+        $(".intro5").empty().css("display","none");
         $(this).css("color", "white");
+        $(".intro5").empty()
     }
     else
     {
         $(this).css("color", "yellow");
-        $(".intro5").css("display","block");
+       $(".intro5").empty().css("display","block");
         $("#bodydiv").addClass("intro5");
         console.log("Fifth")
-        // console.log("Cookie0  ",document.cookie);       
-    }
+        let c=document.cookie.split("=");
+        let name=c[0];
+        let response=c[1];
+        var para=`<p id="responsePara">User name is <var>${name}</var> and response is <var>${response}</var></p>`
+        var btn=`<btn id="deletebtn">Delete Record</btn>`
+        $(".intro5").append(para,btn)
 
-    
-    
+        $(document).off("click","#deletebtn").on("click","#deletebtn",function(){
+            $(".intro5").empty().css("display","none");
+            $(".intro5").empty()
+
+        });
+    }    
   });
 
   $("#sixthEle").hover(function(){
@@ -213,18 +261,3 @@ $("#secondEle").click(function(){
     
   });
 
-$(".intro4").click(function(){
-    $("#submitbtnid").click(function(){
-      let name1=  $("nameinputid").text();
-       let remarks= $("remarksinputid").text();
-
-       var userData = {
-        username: name1,
-        Remark: remarks,
-    };
-    
-    document.cookie = `userData=${encodeURIComponent(JSON.stringify(userData))}; expires=Thu, 31 Dec 2025 12:00:00 UTC; path=/`;
-    
-
-    })
-})
