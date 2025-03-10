@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -113,5 +113,61 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+</html>-->
 
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+ </head>
+ <body>
+    <form id="userForm">
+        <label>Name:</label>
+        <input type="text" id="nameInput" name="name" ><br><br>
+    
+        <label>Email:</label>
+        <input type="email" id="emailInput" name="email" value="john@example.com"><br><br>
+    
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" checked> Male
+        <input type="radio" name="gender" value="Female"> Female <br><br>
+    
+        <label>Skills:</label>
+        <input type="checkbox" name="skills" value="HTML" checked> HTML
+        <input type="checkbox" name="skills" value="CSS"> CSS
+        <input type="checkbox" name="skills" value="JavaScript" checked> JavaScript <br><br>
+    
+        <label>Country:</label>
+        <select id="countrySelect" name="country">
+            <option value="USA">USA</option>
+            <option value="Canada" selected>Canada</option>
+            <option value="UK">UK</option>
+        </select><br><br>
+    
+        <label>Message:</label><br>
+        <textarea id="messageInput" name="message">Hello, this is a message.</textarea><br><br>
+    
+        <label>Profile Picture:</label>
+        <input type="file" id="fileInput"><br><br>
+    
+        <button type="button" id="extractDataBtn">Extract Data</button>
+    </form>
+    <input type="range" id="rangeInput" min="1" max="100">
+    <button id="rangeExtracter">Range</button>
+    <div id="mover" style="height: 100px; width: 100px ; color: aqua; ">Show1</div>
+    <div id="mover1" style="height: 100px; width: 100px; color: blue;">Show2</div>
+    <script>
+        $("#rangeExtracter").click(function(){
+            console.log($("#rangeInput").val())
+        })
+    </script>
+
+    <script src="script.js"></script>    
+ </body>
+ </html>

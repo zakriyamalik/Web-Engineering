@@ -95,4 +95,24 @@ function Dashboard() {
   );
 }
 
+
+
+// import { useState } from "react";
+
+// function Dashboard() {
+//   const [name, setName] = useState(""); // State to store input value
+
+//   return (
+//     <div>
+//       <input
+//         type="text"
+//         placeholder="Enter your name"
+//         value={name}
+//         onChange={(e) => setName(e.target.value)} // Update state on input change
+//       />
+//       <h1>Hi {name}!</h1>
+//     </div>
+//   );
+// }
+
 export default Dashboard
