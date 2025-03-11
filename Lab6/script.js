@@ -47,3 +47,29 @@ function displayStoredData(data) {
                 </div>`;
     $("#submitbtnid").after(dataDiv); // Append after submit button
 }
+
+
+
+
+// Q2
+
+
+function counter() {
+    let count = 0;
+    return function() {
+        count++;
+        console.log(count);
+    };
+}
+
+const myCounter = counter(); // Initialize the counter
+
+myCounter(); // Output: 1
+myCounter(); // Output: 2
+myCounter(); // Output: 3
+myCounter(); // Output: 4
+    document.getElementById("parent-list").addEventListener("click", function(event) {
+        if (event.target.tagName === "LI") { // Ensure it's an <li> element
+            alert("You clicked: " + event.target.textContent);
+        }
+    });
