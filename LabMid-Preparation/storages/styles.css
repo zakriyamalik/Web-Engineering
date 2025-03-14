@@ -1,0 +1,11 @@
+#rescontainerid{
+    height: fit-content;
+    width: fit-content;
+    background-color: aliceblue;
+}
+
+#ul{
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(172, 180, 187);
+}
