@@ -36,8 +36,22 @@
 
 // Event delegation comment a above code 
 
-let ul=document.getElementById("unorderid");
-ul.addEventListener('click',function(event){
-    if(event.target && event.target.matches('.items'))
-    console.log("Clicked : ",event.target.textContent)
+// let ul=document.getElementById("unorderid");
+// ul.addEventListener('click',function(event){
+//     if(event.target && event.target.matches('.items'))
+//     console.log("Clicked : ",event.target.textContent)
+// })
+
+
+
+// dynamically update counter 
+
+let container=document.getElementById("inputContainerid");
+let counter=document.getElementById("countbtnid")
+
+container.addEventListener("input",function(){
+    console.log("Input triggered\n")
+    let length=container.value.length;
+    console.log(length);
+    counter.innerText="Count:"+length
 })
