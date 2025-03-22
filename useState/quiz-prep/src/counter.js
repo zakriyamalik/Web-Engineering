@@ -1,5 +1,4 @@
-import { useState } from "react"
-import Home from "./home";
+import { useState,useMemo } from "react"
 import Customer_sup from "./customer_sup";
 import Login from "./login";
 
@@ -7,7 +6,7 @@ function Counter ({name1}){
     console.log("In Counter function")
     const [count,setCount]=useState(0);
     function double() {
-        if(count==0)
+        if(count===0)
         {
             setCount(1)
         }
@@ -17,6 +16,17 @@ function Counter ({name1}){
             setCount(count*2);
         }
     }
+    const [trigger,setTrigger]=useState(false);
+    const complex=useMemo(()=>{
+        console.log("Complex calculation....");
+        return <div>Giga Chad</div>
+
+    },[trigger])
+    
+    const ComplexComputation=()=>{
+        setTrigger(trigger=>!trigger)
+    }
+   
     
     const reset=()=>{
         
@@ -25,22 +35,22 @@ function Counter ({name1}){
         
     }
     console.log("Name1 is "+name1)
-    if(name1=="Home")
+    if(name1==="Home")
         {
             return <>
-            {/*   
+              
                         <p>You clicked {count} times with prop: Miss:{name1}</p>
                         <button style={{marginRight:"20px"}}onClick={()=>setCount(count+1)}>ADD</button>
                         <button style={{marginRight:"20px"}}onClick={reset}>Reset</button>
-                        <button onClick={double}>Double</button> */}
-                        
+                        <button style={{marginRight:"20px"}}onClick={double}>Double</button>
+                        <button onClick={ComplexComputation}>Complex Calculations</button>
+                        <div>Complex Computation res:{complex}</div>
                        
-                        <Home/>
-                        {/* console.log("In login "); */}
+                        {/* <Home/> */}
                         </>
           
         }
-        else if(name1=="Login")
+        else if(name1==="Login")
         {
             return <>
 {/*   
@@ -51,11 +61,10 @@ function Counter ({name1}){
             
            
             <Login/>
-            {/* console.log("In login "); */}
             </>
         }
     
-        else if(name1=="Customer_sup")
+        else if(name1==="Customer_sup")
         {
             return <>
             {/*   
@@ -66,7 +75,6 @@ function Counter ({name1}){
                         
                        
                         <Customer_sup/>
-                        {/* console.log("In login "); */}
                         </>
             
         }
@@ -74,7 +82,7 @@ function Counter ({name1}){
         {
             <>
 
-            
+
 
             </>
         }
