@@ -182,18 +182,18 @@ span{
 }
 
 #theme-toggle {
-    background: none;  /* Removes background */
-    border: none;      /* Removes border */
-    cursor: pointer;   /* Makes it clickable */
-    font-size: 24px;   /* Adjust icon size */
-    color: inherit;    /* Uses text color from the theme */
-    outline: none;     /* Removes focus outline */
+    background: none;   
+    border: none;       
+    cursor: pointer;    
+    font-size: 24px;    
+    color: inherit;     
+    outline: none;      
 }
 #theme-toggle:hover {
-    color: #b2b3a9;    /* Changes color on hover */
+    color: #b2b3a9;     
 }
 #theme-toggle:active {
-    transform: scale(1.1);  /* Scales down on click */
+    transform: scale(1.1);   
 }
 #theme-toggle  p{
     font-size: 12px;
@@ -417,21 +417,21 @@ ul a{
     border: border-box;
 }
 
-/* ...existing styles... */
+
 
 #theme-toggle {
-    background: none;  /* Removes background */
-    border: none;      /* Removes border */
-    cursor: pointer;   /* Makes it clickable */
-    font-size: 24px;   /* Adjust icon size */
-    color: inherit;    /* Uses text color from the theme */
-    outline: none;     /* Removes focus outline */
+    background: none;  
+    border: none;       
+    cursor: pointer;    
+    font-size: 24px;    
+    color: inherit;     
+    outline: none;      
 }
 #theme-toggle:hover {
-    color: #b2b3a9;    /* Changes color on hover */
+    color: #b2b3a9;     
 }
 #theme-toggle:active {
-    transform: scale(1.1);  /* Scales down on click */
+    transform: scale(1.1);   
 }
 #theme-toggle p {
     font-size: 12px;

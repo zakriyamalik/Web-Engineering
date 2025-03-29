@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("themeToggle element:", themeToggle);
     
     if (!themeToggle) {
-      console.error("Theme toggle button not found!");
+      console.log("Theme toggle button not found!");
       return;
     }
     
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("toggleIcon element:", toggleIcon);
     
     if (!toggleIcon) {
-      console.error("Toggle icon not found inside the theme toggle button!");
+      console.log("Toggle icon not found inside the theme toggle button!");
       return;
     }
   
