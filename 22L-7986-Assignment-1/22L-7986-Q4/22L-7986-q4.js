@@ -25,6 +25,5 @@ function displayDate() {
     else
     {
         alert("Write something in the input field");
-        console.error("Write something in the input field");
     }
 }

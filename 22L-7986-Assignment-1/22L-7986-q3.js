@@ -5,14 +5,20 @@ const students = [
     { name: "Ibrahim", age: 22, marks: 76 },
     {name: "Usama", age: 21, marks :80}
     ];
+    console.log("Initial Student data")
     console.log(students);
 
 
      // 1. Sort students by marks in descending order.
 
      students.sort((a,b) => b.marks - a.marks);
+     console.log("After sorting.......")
      console.log(students);
      // 2. Return student names with marks greater than 80.
         const result = students.filter((student) => student.marks > 80);
+        console.log("Greater than 80.......")
+        console.log(result);
     //3. Return students older than 21.
     const result1 = students.filter((student) => student.age > 21);
+    console.log("Older than 21.......")
+    console.log(result1);
