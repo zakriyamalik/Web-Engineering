@@ -2,18 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme-toggle");
     console.log("themeToggle element:", themeToggle);
     
-    if (!themeToggle) {
-      console.log("Theme toggle button not found!");
-      return;
-    }
+    
     
     const toggleIcon = themeToggle.querySelector("i");
     console.log("toggleIcon element:", toggleIcon);
     
-    if (!toggleIcon) {
-      console.log("Toggle icon not found inside the theme toggle button!");
-      return;
-    }
+   
   
     console.log("Initial theme:", localStorage.getItem("theme"));
   
@@ -41,26 +35,31 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleIcon.classList.replace("fa-toggle-off", "fa-toggle-on");
     }
   });
-  function myFunction()
-  {
-    console.log("In my function\n");
-      const after=document.getElementById("afterNav");
-      console.log("in function");
-      if(after.style.display=="none")
-      {
-          console.log("In if")
-          console.log(after.style.display)
-          after.style.display="flex"
-          console.log(after.style.display)
-      }
-      else
-      {
-          console.log("In else")
-          console.log(after.style.display)
-          after.style.display="none"
-          console.log(after.style.display)
-      }
+  // function myFunction()
+  // {
+  //   console.log("In my function\n");
+  //     const after=document.getElementById("afterNav");
+  //     console.log("in function");
+  //     if(after.style.display=="none")
+  //     {
+  //         console.log("In if")
+  //         console.log(after.style.display)
+  //         after.style.display="flex"
+  //         console.log(after.style.display)
+  //     }
+  //     else
+  //     {
+  //         console.log("In else")
+  //         console.log(after.style.display)
+  //         after.style.display="none"
+  //         console.log(after.style.display)
+  //     }
 
 
 
+  // }
+
+
+  function myFunction() {
+    $("#afterNav").slideToggle("slow"); // "slow" can be replaced with a duration in ms, e.g., 500
   }
