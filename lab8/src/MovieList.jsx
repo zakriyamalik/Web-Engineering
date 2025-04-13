@@ -30,8 +30,9 @@ function MovieList(){
     console.log(index)
     setMovie((prev)=>
         {
-            const updatedMovies=[...prev]
-          updatedMovies.pop(index)
+            // const updatedMovies=[...prev]
+            const updatedMovies=prev.filter((item,i)=>i!=index)
+        //   updatedMovies.pop(index)
             return updatedMovies;
         }
     )
