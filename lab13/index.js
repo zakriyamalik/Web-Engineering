@@ -1,7 +1,20 @@
-var http=require('http')
+const express = require('express');
+const app = express();
 
-http.createServer(function(req,res){
-    res.writeHead(200,{'content-type':'text/html'})
-    res.end('Hello World');
+const character_routes = require('./routes/character_routes');
+const gadget_routes = require('./routes/gadget_routes');
 
-}).listen(8080);
+app.use(express.json());
+
+app.use(character_routes);
+app.use(gadget_routes);
+
+app.get('/', (req, res) => 
+{
+    res.send('Doraemon API up');
+});
+
+app.listen(8080, () => 
+{
+    console.log('Server running on 8080');
+});
