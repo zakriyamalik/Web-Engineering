@@ -1,6 +1,7 @@
 const express=require('express');
 const cors=require('cors');
 const mongoose=require('mongoose');
+const jwt=require("jsonwebtoken");
 const User=require('./model');
 const app=express()
 const port=3000;
@@ -16,7 +17,18 @@ mongoose.connect
 app.get('/',(req,res)=>{
     res.send("Hello World");
 })
-
+app.post('/login', async(req,res)=>{
+    const {name,password}=req.body;
+    const user= await User.findOne({name});
+    if(user && user.password==password){
+        const token=jwt.sign({id:user.name},"toooooooken");
+        res.send(token);
+    }
+    else
+    {
+        res.send("Invalid credentials");
+    }
+})
 app.post('/addUser', async (req,res)=>{
     console.log("received in body  ",req.body);
     const {name,password}=req.body;
