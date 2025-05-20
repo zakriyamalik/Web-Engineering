@@ -8,7 +8,8 @@ function home(){
         }
        
             <NavLink>
-             <Link to='/AddUser'>Add User</Link>
+             <Link to='/AddUser'>Add User</Link> |   
+             <Link to='/DeleteUser'> DeleteUser</Link>
              </NavLink>
            
             

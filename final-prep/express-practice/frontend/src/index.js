@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import  Home  from './home';
 import reportWebVitals from './reportWebVitals';
-import AddUser from "./AddUser"
-import { NavLink } from "react-router"
-import {Link} from "react-router"
+import AddUser from "./AddUser";
+import DeleteUser from './DeleteUser';
 import { BrowserRouter,Routes,Route } from "react-router"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +15,7 @@ root.render(
         <Routes>
            <Route path="/" element={<Home/>}/>
             <Route path="/AddUser" element={<AddUser/>}/>
+            <Route path="/DeleteUser" element={<DeleteUser/>}></Route>
            
         </Routes>
                     

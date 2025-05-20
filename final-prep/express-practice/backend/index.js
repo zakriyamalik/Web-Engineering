@@ -5,6 +5,10 @@ const User=require('./model');
 const app=express()
 const port=3000;
 
+
+app.use(cors());
+app.use(express.json());
+
 mongoose.connect
 ('mongodb://localhost:27017/final-prep').then
 (()=>{
@@ -37,8 +41,21 @@ app.put('/user',(req,res)=>{
 
 
 
-app.delete('/user',(req,res)=>{
-    res.send("Delete request from user");
+app.delete('/DeleteUser',async (req,res)=>{
+    const {name}=req.body;
+
+    
+    const result=await User.deleteOne({name:name})
+    if(result.deletedCount==0)
+    {
+    res.send("User not found");
+    }
+    else
+    {
+
+    res.send("User deleted");
+    }
+
 })
 
 
@@ -47,8 +64,6 @@ console.log("Connected with database")
 }).catch
 ((error)=>console.log("Error creating database",error));
 
-app.use(cors());
-app.use(express.json());
 
 
 
