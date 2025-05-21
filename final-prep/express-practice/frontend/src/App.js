@@ -2,6 +2,7 @@ import  Home  from './home';
 import AddUser from "./AddUser";
 import Login from './loginpage';
 import DeleteUser from './DeleteUser';
+import UpdateUser from './Updateuser';
 import PrivateRoute from './PrivateRoute';
 import {Routes,Route } from "react-router"
 import './App.css';
@@ -20,6 +21,9 @@ function App() {
                  </PrivateRoute>
                   }
                  />
+                 <Route path='/updateUser' element={<UpdateUser/>}>
+
+                 </Route>
             </Routes>
              
   );

@@ -51,6 +51,22 @@ app.put('/user',(req,res)=>{
     res.send("Got is put requst from the user");
 })
 
+app.patch('/updateUser/:name',async (req,res)=>{
+    const name=req.params.name;
+    const {pass}=req.body;
+     console.log("In update user backend ",name,pass);
+    
+    try{
+        const user= await User.findOneAndUpdate({name:name},{$set:{password:pass}},{new:true});
+     res.send(`${user} is been updates`);
+   
+
+    } 
+    catch(err){
+        res.send(err);
+    }
+})
+
 
 
 app.delete('/DeleteUser',async (req,res)=>{
