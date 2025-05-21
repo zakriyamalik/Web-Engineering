@@ -1,14 +1,17 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import store from './store';
+import Counter from './Counter';
 import reportWebVitals from './reportWebVitals';
-
-import Movies from './Movies';
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Movies/>
+  <Provider store={store}>
+     <Counter />
+  </Provider>
+   
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
